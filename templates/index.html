@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Customer Churn Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Customer Churn Prediction</h2>
+
+<form action="/predict" method="post">
+
+<input type="number" name="Age" placeholder="Age">
+
+<input type="number" name="Gender" placeholder="Gender (Male=1 Female=0)">
+
+<input type="number" name="Tenure" placeholder="Tenure">
+
+<input type="number" name="Usage Frequency" placeholder="Usage Frequency">
+
+<input type="number" name="Support Calls" placeholder="Support Calls">
+
+<input type="number" name="Payment Delay" placeholder="Payment Delay">
+
+<input type="number" name="Subscription Type" placeholder="Subscription Type">
+
+<input type="number" name="Contract Length" placeholder="Contract Length">
+
+<input type="number" name="Total Spend" placeholder="Total Spend">
+
+<input type="number" name="Last Interaction" placeholder="Last Interaction">
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+
+</html>
